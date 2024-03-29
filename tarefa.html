@@ -6,9 +6,12 @@
     <title>Works</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <script type='text/javascript' src='main.js'></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        #listaRegistros{ display: none; }
-        #CadastroRegistro{ display: none; }
+
+        #listaRegistros{ display: none; } #CadastroRegistro{ display: none; }
 
         body[page=lista] #listaRegistros{ display: block; }
 
@@ -17,6 +20,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             font-size: 14px;
+            padding: 15px;
         }
         table{
             width: 100%;
@@ -50,11 +54,11 @@
             <thead>
                 <tr>
                     <th>
-                    <th>Responsável :</th>
-                    <th>Atribuida :</th>
-                    <th>Hora de inicio :</th>
-                    <th>Hora de termino :</th>
-                    <th>Intercorrência :</th>
+                    <th>Responsável : </th>
+                    <th>Atribuida : </th>
+                    <th>Hora de inicio : </th>
+                    <th>Hora de termino : </th>
+                    <th>Intercorrência : </th>
                     </th>
                 </tr>
             </thead>
@@ -69,42 +73,45 @@
         <div id="CadastroRegistro">
         
             <div class="label">
-                <div>Responsável :</div>
-                <input title="tel"/>
+                <div>Responsável : <input title="nome"/></div>
             </div>
     
             <div class="toi">
-                <div>Atribuida :</div>
-                <input type="submit" />
-            </div>
-
-        
-            <div>
-                <div class="tfl">
-                    <div> Hora de início :</div>
-                    <input type="tel" />
-
-                </div>
-
-            </div>
-            <div>
-                <div class="desh">
-                    <div> Hora de termino :</div>
-                    <input type="tel" />
-                </div>
-            </div>
-            <div>
-                <div class="">
-                    <div> Intercorrência :</div>
-                    <input type="text" />
-                </div>
+                <div>Atribuida : <select>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select></div>
             </div>
 
             <div>
-                <button>Salvar</button>
-                <button onclick="vizualizar('lista')">cancelar</button>
+                <form>
+                    <label for="Hora de início"> Hora de início: </label>
+                    <input id="Hora de início" type="time" name="Hora de início" />
+                </form>
+                  
+
+            </div>
+
+            <div>
+                <form>
+                    <label for="Hora de termino">Hora de termino: </label>
+                    <input id="Hora de termino" type="time" name="Hora de termino" />
+                </form>
+            </div>
+
+            <div>
+                <p>
+                    <label for="mensagem">Intercorrência : </label>
+                </p>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="10"></textarea>
+            </div>
+
+            <div>
+                <button style=" background-color: rgba(152, 167, 157, 0.89); color: #ffff;" onclick="vizualizar('lista')">cancelar</button>
+                <button style=" color: #ffff;">Salvar</button>
             </div>
         </div>
+
     </body>
 </body>
 </html>
